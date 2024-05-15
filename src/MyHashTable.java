@@ -110,4 +110,11 @@ public class MyHashTable<K, V> {
         }
         return null;
     }
+    public HashNode<K, V>[] getChainArray() {
+        return chainArray;
+    }
+
+    public int getM() {
+        return M;
+    }
 }
