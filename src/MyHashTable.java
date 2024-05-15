@@ -1,4 +1,7 @@
 import java.util.Objects;
+
+import static java.lang.Math.abs;
+
 public class MyHashTable<K, V> {
     private class HashNode<v, k>{
         private K key;
@@ -30,7 +33,7 @@ public class MyHashTable<K, V> {
 
     private int hash(K key) {
         int hashCode = key.hashCode();
-        int positiveHashCode = hashCode & Integer.MAX_VALUE;
+        int positiveHashCode = abs(hashCode);
         return positiveHashCode % M;
     }
 
